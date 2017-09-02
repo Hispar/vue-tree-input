@@ -2,7 +2,7 @@
   "name": "tree-input",
   "version": "0.1.0",
   "description": "A vue component for create tree input elements",
-  "main": "index.js",
+  "main": "./dist/tree-input.min.js",
   "dependencies": {
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
@@ -23,9 +23,11 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
+    "test:watch": "karma start --single-run=false",
     "lint": "eslint src --ext=js,vue || exit 0",
-    "dev": "webpack-dev-server --content-base ./dev --env=webpack.dev --open --hot"
+    "dev": "webpack-dev-server --content-base ./dev --env=webpack.dev --open --hot",
+    "dist": "webpack --env=webpack.dist"
   },
   "author": "Pablo Burgos <hispar@gmail>",
   "license": "MIT"
